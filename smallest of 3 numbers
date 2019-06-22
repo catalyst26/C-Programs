@@ -1,0 +1,23 @@
+#include <iostream>
+
+int minNum(int a, int b, int c){
+    int min = a;
+    
+    if (b < min)
+        min = b;
+    else if (c < min)
+        min = c;
+    
+    return min;
+};
+
+int main()
+{
+    using std::cout;
+   
+    
+    cout << minNum(45, 22, 96) << "\n";
+    
+    
+    return 0;
+}
