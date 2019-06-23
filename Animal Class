@@ -1,0 +1,79 @@
+#include <iostream>
+
+using std::string;
+using std::cout;
+
+
+class Animal{
+    
+private:
+    int height;
+    int weight;
+    string name;
+    
+    static int numOfAnimals;
+    
+public:
+    
+    int getHeight(){ return height; }
+    int getWeight(){ return weight; }
+    string getName(){ return name; }
+    void setHeight(int cm){ height = cm; }
+    void setWeight(int kg){ weight = kg; }
+    void setName(string animalName){ name = animalName; }
+    
+    
+    
+    Animal(int, int, string);
+    ~Animal();
+    
+    Animal();
+    
+    static int getNumOfAnimals(){ return numOfAnimals; }
+    
+    void toString();
+    
+};
+
+int Animal::numOfAnimals = 0;
+
+
+Animal::Animal(int height, int weight, string name)
+{
+    this -> height = height;
+    this -> weight = weight;
+    this -> name = name;
+    Animal::numOfAnimals++;
+}
+
+Animal::~Animal()
+{
+    cout << "Animal " << this -> name << " destroyed\n";
+}
+
+Animal::Animal()
+{
+    Animal::numOfAnimals++;
+}
+
+void Animal::toString(){
+    cout << this -> name << " is " << this -> height << " cms tall and " << this -> weight << " kgs in weight.\n";
+}
+int main()
+{
+    using std::cout;
+    using std::cin;
+   
+     
+    Animal fab;
+    
+    fab.setHeight(33);
+    fab.setWeight(10);
+    fab.setName("Fab");
+    
+    cout << fab.getName() << " is " << fab.getHeight() << " cms tall and " << fab.getWeight() << " kgs in weight.\n";
+    
+    Animal Tom(36, 15, "Tom");
+    
+    cout << Tom.getName() << " is " << Tom.getHeight() << " cms tall and " << Tom.getWeight() << " kgs in weight.\n";
+    
