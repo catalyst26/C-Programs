@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+    
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int n, i;
+    cout<<"Enter a number for multiplication table: ";
+    cin>>n;
+    for (i = 1; i <= n; i++)
+    {
+        cout << n << " * " << i << " = " << i*n << endl;
+    }
+    
+    
+    return 0;
+}
+
+
+// program for multiplication table up to square of N
