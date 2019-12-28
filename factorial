@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+    
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int n, i, fact = 1;
+    cout<<"Enter number to compute factorial: ";
+    cin>>n;
+    for (i = 1; i <= n; i++)
+    {
+        fact *= i;
+    }
+    
+    cout << n << "! = " << fact << endl;
+    
+    
+    return 0;
+}
