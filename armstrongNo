@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main()
+{
+    
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int n, r, sum = 0, m;
+    cout << "Enter number to check if it's Armstrong: ";
+    cin >> n;
+    m = n;
+    
+    while (n > 0)
+    {
+        r = n % 10; // gives last digit
+        n /= 10;    // takes off last digit
+        sum = sum + r * r * r; // Armstong is the sum of cubes of each digit = to number
+    }
+    
+    if (sum == m)
+        cout << m << " is an Armstrong number." << endl;
+    else
+        cout << m << " is not an Armstrong number." << endl;
+    
+    
+    return 0;
+}
