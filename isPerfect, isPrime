@@ -1,0 +1,34 @@
+#include <iostream>
+
+int main()
+{
+    
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int n, i, sum = 0, count = 0;
+    cout<<"Enter number you want to find factors for, check for perfect number & check if it is prime: ";
+    cin>>n;
+    for (i = 1; i <= n; i++)
+    {
+        if (n % i == 0)
+        {
+            cout << i << " is a factor of " << n << endl;
+            sum += i; count++;
+        }
+    }
+    
+    if (n * 2 == sum)
+        cout << n << " is a perfect number." << endl;
+    else
+        cout << n << " is not a perfect number." << endl;
+    
+    if (count == 2)
+        cout << n << " is a prime number." << endl;
+    else
+        cout << n << " is not a prime number." << endl;
+    
+    
+    return 0;
+}
