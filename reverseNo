@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main()
+{
+    
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int n, r, rev = 0;
+    cout << "Enter number for reversal: ";
+    cin >> n;
+    
+    while (n > 0)
+    {
+        r = n % 10;
+        n /= 10;
+        rev = rev * 10 + r;
+    }
+    
+    cout << "Number entered in reverse is: " << rev << endl;
+    
+    return 0;
+}
