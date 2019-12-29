@@ -1,0 +1,29 @@
+int main()
+{
+    
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int n, r, rev = 0, m; 
+    cout << "Enter number for reversal: ";
+    cin >> n;
+    m = n; // hold n in m, n becomes 0 at end of while loop
+    
+    while (n > 0)
+    {
+        r = n % 10;
+        n /= 10;
+        rev = rev * 10 + r;
+    }
+    
+    cout << "Number entered in reverse is: " << rev << endl;
+    
+    if (m == rev)
+        cout << m << " is a Palindrome." << endl;
+    else
+        cout << m << " is not a Palindrome." << endl;
+    
+    
+    return 0;
+}
