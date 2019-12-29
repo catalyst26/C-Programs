@@ -1,0 +1,72 @@
+#include <iostream>
+
+int main()
+{
+    
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int n, r, rev = 0, m, rem;
+    const char NUL = 0;
+    cout << "Enter number to output in words: ";
+    cin>>n;
+    m = n;
+    
+    while (n > 0)
+    {
+        r = n % 10;
+        rev = rev * 10 + r ;
+        n /= 10;
+        //cout << r << " ";
+    }
+    cout << endl;
+    while (rev > 0)
+    {
+        rem = rev % 10;
+        rev /= 10;
+        //cout << rem << " ";
+        
+        switch (rem)
+        {
+            case NUL:
+                cout << "ZERO ";
+                break;
+            case 1:
+                cout << "ONE ";
+                break;
+            case 2:
+                cout << "TWO ";
+                break;
+            case 3:
+                cout << "THREE ";
+                break;
+            case 4:
+                cout << "FOUR ";
+                break;
+            case 5:
+                cout << "FIVE ";
+                break;
+            case 6:
+                cout << "SIX ";
+                break;
+            case 7:
+                cout << "SEVEN ";
+                break;
+            case 8:
+                cout << "EIGHT ";
+                break;
+            case 9:
+                cout << "NINE ";
+                break;
+            default: cout << "Invalid Input" << endl;
+                break;
+        }
+    }
+    cout << endl;
+    
+    return 0;
+}
+
+
+/// KNOWN BUG -----> Wont display zeroes at the end of inputted number 
