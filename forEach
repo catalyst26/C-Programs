@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+
+
+    char A[] = {'a', 'b', 'c', 'd'};
+    
+    for (auto x : A) // doesn't need to know the type of data with auto
+        // for each x in A, not depend on size like regular for loop
+        // will access all elements
+    {
+        cout << ++x << endl; // increment element copy
+    }
+    
+    
+    
+    return 0;
+}
