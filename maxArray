@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+
+
+    int A[7] = {28, 33, 21, 19, 5, 102, 77};
+    int max = A[0];
+    
+    for (int i = 1; i < 7; i++)
+    {
+        if (A[i] > max)
+            max = A[i];
+    }
+    cout << "Maximum number is: " << max << endl;
+    return 0;
+}
