@@ -1,0 +1,34 @@
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+
+    
+    int A[10], n = 10, key;
+    // take input from user
+    cout << "Enter ten numbers: ";
+    // fill array elements using for loop
+    for (int i = 0; i < n; i++)
+    {
+        cin >> A[i];
+    }
+    
+    cout << "Enter key: ";
+    cin >> key;
+    
+    // Linear search through array starting with element at index 0
+    for (int i = 0; i < n; i++)
+    {
+        if (key == A[i])
+        {
+            cout << "Key found at index " << i << endl;
+            return 0; // When found, end program or 'key not found' will be printed as well
+        }
+    }
+    cout << "Key not found." << endl;
+    
+    return 0;
+}
