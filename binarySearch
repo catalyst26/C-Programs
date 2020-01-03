@@ -1,0 +1,31 @@
+#include <iostream>
+
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+
+    
+    int A[10] = {14, 18, 26, 31, 44, 49, 52, 57, 63, 85};
+    int low = 0, high = 9, key, mid;
+    cout << "Enter key: ";
+    cin>>key;
+    
+    while (low <= high) // if low crosses high, element not in list
+    {
+        mid = (low + high) / 2;
+        if (A[mid] == key)
+        {
+            cout << "key found at index " << mid << endl;
+            return 0; // exit program once found
+        }
+        else if (key < A[mid])
+            high = mid - 1; // moves the new high element to the left of mid to search left half
+        else
+            low = mid + 1; // moves the new low element to the right of mid to search right half
+    }
+    cout << "Key not found." << endl;
+    return 0;
+}
