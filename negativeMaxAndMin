@@ -1,0 +1,52 @@
+#include <iostream>
+
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int A[10] = {1, 3, 5, 7, 29, 11, 13, 115, 17, 21};
+
+    int mostMax = INT_MIN; smallest int value approx -2.1 billion
+    for (auto x : A)
+    {
+        if (x > mostMax)
+            mostMax = x;
+    }
+    cout << "Maximum number is " << mostMax << endl;
+    
+    return 0;
+}
+
+
+
+
+#include <iostream>
+
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int A[10] = {-1, -3, -5, -7, -29, -11, -13, -115, -17, -21};
+
+    int mostMin = INT_MAX; // largest int value approx 2.1 billion
+    for (auto x : A)
+    {
+        if (x < mostMin) // if x is less than min
+            mostMin = x;
+    }
+    cout << "Minimum number is " << mostMin << endl;
+    
+    return 0;
+}
+
+
+
+
+// Constant INT_MIN and INT_MAX used when dealing with negative numbers in array
+// Will still find min and max in positive number array
