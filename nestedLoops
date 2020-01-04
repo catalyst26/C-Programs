@@ -1,0 +1,44 @@
+#include <iostream>
+
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    for (int i = 1; i <= 5; i++) // outer loop for repeating those lines
+    {
+        for (int j = 1; j <= 5; j++) // inner loop displays one line
+        {
+            cout << j << " ";
+        }
+        cout<<endl;
+    }
+    
+    
+    return 0;
+}
+
+
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    for (int i = 1; i <= 3; i++)
+        // outer loop for repeating those lines(# of rows)
+    {
+        for (int j = 1; j <= 5; j++)
+            // inner loop displays on one line(# of columns)
+        {
+            cout <<"(" << i << "," << j << ") ";
+        }
+        cout<<endl;
+    }
+    
+    return 0;
+}
