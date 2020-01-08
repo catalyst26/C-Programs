@@ -1,0 +1,23 @@
+
+    using std::cin;
+    using std::endl;
+    
+    
+    int n, i;
+    double num[100], sum = 0.0, avg;
+    
+    cout << "Enter the number of array elements: ";
+    cin >> n;
+    
+    for (i = 0; i < n; i++)
+    {
+        cout << i + 1 << ". Enter number: ";
+        cin >> num[i];
+        sum += num[i];
+    }
+    
+    avg = sum / n;
+    cout << "Average is: " << avg << endl;
+    
+    return 0;
+}
