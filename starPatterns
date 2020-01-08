@@ -1,0 +1,115 @@
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    
+    for (int i = 1; i <= 4; i++)
+        // outer loop for repeating those lines(# of rows)
+    {
+        for (int j = 1; j <= 4; j++)
+            // inner loop displays on one line(# of columns)
+        {
+            if (i >= j)
+            {
+                cout << "*";
+            }
+        }
+        cout<<endl;
+    }
+    
+    
+    return 0;
+    
+/* Output is:   
+*
+**
+***
+****
+*/
+
+for (int i = 0; i < 4; i++)
+        // outer loop for repeating those lines(# of rows)
+    {
+        for (int j = 0; j < 4; j++)
+            // inner loop displays on one line(# of columns)
+        {
+            if (i > j) // Diagonal means i & j are equal
+                cout << " ";
+            else
+                cout << "*";
+        }
+        cout<<endl;
+    }
+    
+/*  Output is
+****
+ ***
+  **
+   *
+*/
+
+
+for(int i = 0; i < 5; i++)
+    {
+        for(int j = 0; j < 5; j++)
+        {
+            if(i <= j)
+                cout<<"* ";
+            else
+                cout<<" ";
+        }
+        cout <<endl;
+    }
+    
+/*  Output is
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+*/
+
+
+for(int i = 0; i < 5; i++)
+    {
+        for(int j = 0; j < 5; j++)
+        {
+            if(i + j >= 4)
+                cout << "* ";
+            else
+                cout<< "  ";
+        }
+        cout <<endl;
+    }
+    
+ /*  Output is
+        *
+      * *
+    * * *
+  * * * *
+* * * * * 
+*/
+
+
+for(int i = 0; i < 5; i++)
+    {
+        for(int j = 0; j < 5; j++)
+        {
+            if(i + j <= 4)
+                cout << "* ";
+        }
+        cout <<endl;
+    }
+    
+    
+ /*  Output is
+        * * * * *
+        * * * *
+        * * *
+        * *
+        *    
+*/
