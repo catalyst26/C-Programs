@@ -1,0 +1,69 @@
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    
+    
+    int A[2][3] = {{2,5,9},{6,9,15}};
+    // row # followed by column #
+    
+    // Accessing 2D array elements
+    for(int i = 0; i < 2; i++)
+    {
+        for(int j = 0; j < 3; j++)
+        {
+            cout<<A[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+    return 0;
+}
+
+int A[2][3] = {{2,5,9},{6,9,15}};
+    int B[2][3] = {6,3,4,9,5,2};
+    int C[2][3];
+    // row # followed by column #
+    
+    for(int i = 0; i < 2; i++)
+    {
+        for(int j = 0; j < 3; j++)
+        {
+            C[i][j] = A[i][j] * B[i][j];
+        }
+    }
+    // printing using for each
+    for (auto& x : C)
+    {
+        for (auto& y : x)
+        {
+            cout<< y << " ";
+        }
+        cout<<endl;
+    }
+    
+    
+    
+    int A[2][3];
+    
+    for (auto& x : A)
+    {
+        for (auto& y : x)
+        {
+            // reading in values from keyboard using for each
+            cin >> y;
+        }
+    }
+    for (auto& x : A)
+    {
+        for (auto& y : x)
+        {
+            // outputting using for each
+            cout << y << " ";
+        }
+        cout<<endl;
+    }
