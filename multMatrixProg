@@ -1,0 +1,73 @@
+#include <iostream>
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int A[10][10], B[10][10], C[10][10], r1, c1, r2, c2, i, j, k;
+    
+    cout << "Enter rows and columns for first matrix: ";
+    cin >> r1 >> c1;
+    cout << "Enter rows and columns for second matrix: ";
+    cin >> r2 >> c2;
+    
+    while (c1 != r2)
+    {
+        cout << "Error! Colums of first matrix not equal to column of second." << endl;
+        
+        cout << "Enter rows and columns for first matrix: ";
+        cin >> r1 >> c1;
+        cout << "Enter rows and columns for second matrix: ";
+        cin >> r2 >> c2;
+    }
+    
+    //Store elements of first matrix
+    cout << "Enter elements of matrix 1: " << endl;
+    for (i = 0; i < r1; i++)
+    {
+        for (j = 0; j < c2; j++)
+        {
+            cout << "Enter element A" << i + 1 << j + 1 << " : ";
+            cin >> A[i][j];
+        }
+    }
+    // Store elements of second matrix
+    cout << "Enter elements of matrix 2: " << endl;
+    for (i = 0; i < r2; i++)
+    {
+        for (j = 0; j < c2; j++)
+        {
+            cout << "Enter element B" << i + 1 << j + 1 << " : ";
+            cin >> B[i][j];
+        }
+    }
+    // Multipling A & B matrices and storing in C
+    for (i = 0; i < r1; i++)
+    {
+        for (j = 0; j < c1; j++)
+        {
+            C[i][j] = 0;
+            for (k = 0; k < c1; k++)
+            {
+                C[i][j] = A[i][k] * B[i][k];
+            }
+        }
+    }
+    
+    // Displaying C matrix
+    cout << endl << "Output Matrix: " << endl;
+    for (i = 0; i < r1; i++)
+    {
+        for (j = 0; j < c2; j++)
+        {
+            cout << C[i][j] << " ";
+            if (j == c2 - 1)
+                cout<<endl;
+        }
+    }
+    
+    
+    return 0;
+}
