@@ -30,6 +30,10 @@ int main()
     // difference divided by size of data type
     //d = q - p;
     cout << "Two pointers are seperated by "<< q - p << " elements."<< endl;
+    
+    q = nullptr;
+    p = nullptr;
+    
     return 0;
 }
 
