@@ -1,0 +1,26 @@
+#include <iostream>
+
+int pow(int m, int n)
+{
+    int result = 1;
+    for(int i = 1; i <= n; i++)
+    {
+        result *= m;
+    }
+    return result;
+}
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    
+    double a, b, c;
+    cout << "Enter base then exponent: ";
+    cin >> a >> b;
+    
+    
+    c = pow(a, b);
+    cout << "Result is " << c << endl;
