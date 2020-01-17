@@ -1,0 +1,33 @@
+int Min(int x, int y, int z)
+{
+    if(x < y && x < z)
+        return x;
+    else if(y < z)
+        return y;
+    else
+        return z;
+}
+
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    
+    double a, b, c, r;
+    cout << "Enter three numbers: ";
+    cin >> a >> b >> c;
+    
+    
+    r = Min(a, b, c);
+    cout << "Result is " << r << endl;
+
+
+    
+    /*
+     Enter three numbers: 22 87 9
+     Result is 9
+     */
+    
