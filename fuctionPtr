@@ -1,0 +1,67 @@
+#include <iostream>
+
+void display()
+{
+    using std::cout;
+    cout << "Wassup Scrap\n";
+}
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    // function pointer declaration
+    // must use parenthesis
+    void (*fp)();
+    
+    // assign name of function to pointer/ initialization
+    // function address stored in ptr
+    fp = display;
+    
+    // function call
+    (*fp)();
+    
+    return 0;
+}
+
+
+
+#include <iostream>
+
+int max(int x, int y)
+{
+    return x > y ? x : y;
+}
+
+int min(int x, int y)
+{
+    return x < y ? x : y;
+}
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    int (*fp)(int,int);
+    
+    // ptr points to max func
+    fp = max;
+    cout << (*fp)(11,32) << endl;
+    
+    // ptr ponits to min func, same name different operations
+    fp = min;
+    cout << (*fp)(11,32) << endl;
+    
+    // func pointer can point to all functions with same signature
+    
+    /*
+     32
+     11
+     */
+    
+    return 0;
+}
+
