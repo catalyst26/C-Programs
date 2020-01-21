@@ -1,0 +1,24 @@
+#include <iostream>
+
+template <class T>
+T max(T x, T y)
+{
+    return x>y?x:y;
+}
+
+int main()
+{
+    using std::cout;
+    using std::cin;
+    using std::endl;
+    
+    
+    int c = max(12, 4); // T will become int
+    double s = max(34.2,88.9); // T will become double
+    
+    cout << c << " " << s << endl;
+
+    
+    
+    return 0;
+}
