@@ -1,0 +1,10 @@
+void swap(int &a, int &b)
+{
+    using std::cout;
+    using std::endl;
+    
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
