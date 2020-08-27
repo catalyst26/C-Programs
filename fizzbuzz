@@ -1,0 +1,53 @@
+#include <iostream>
+
+
+int main()
+{
+	using std::cout;
+
+	int i, r, n;
+	int sum = 0;
+
+	for (i = 1; i <= 100; i++)
+	{
+		n = i; // store current index in n
+    
+    // to extract digits from the index number to add and check if multiple of 3, 5, or both
+		while (n > 0)
+		{
+			r = n % 10; // strips last digit of number
+			sum = sum + r; // adds digit to sum
+			n /= 10; // makes number smaller to get to base case of < 0
+		}
+		// check if number is multiple of 3 & 5, or a multiple of 15 to optimize code
+		if (((sum % 3 == 0) || (sum % 9 == 0)) && ((i % 10 == 5) || (i % 10 == 0)))
+		{
+			cout << "FizzBuzz" << "\n";
+		} 
+    
+    // if sum of digits is divided by 3 or 9 with no remainder
+		else if ((sum % 3 == 0) || (sum % 9 == 0))
+		{
+			cout << "Fizz" << "\n";
+		}
+    
+    // if the last digit of index value is 0 or 5
+		else if ((i % 10 == 5) || (i % 10 == 0))
+		{
+			cout << "Buzz" << "\n";
+		}
+    
+    // print out all other numbers
+		else
+		{
+			cout << i << "\n";
+		}
+		
+    // reset the sum value after each loop iteration
+		sum = 0;
+	}
+	
+
+	
+
+}
